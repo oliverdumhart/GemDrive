@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mainViewModel"
+            type="com.oliverdumhart.gemdrive.overview.MainViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/main_activity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/drives_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--<Button
+            android:id="@+id/start_drive_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button_background"
+            android:onClick="@{() -> mainViewModel.onCreateDriveClicked()}"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:text="@string/create_drive"
+            android:textColor="@color/white" />-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:onClick="@{() -> mainViewModel.onCreateDriveClicked()}"
+            app:srcCompat="@drawable/ic_add_24dp" />
+
+    </FrameLayout>
+</layout>

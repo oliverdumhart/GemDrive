@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/menu_item_finish_drive"
+        android:icon="@drawable/ic_flag_24dp"
+        android:title="Fahrt abschließen"
+        app:showAsAction="always"
+        android:visible="false"
+        tools:visible="true"/>
+
+    <item
+        android:id="@+id/menu_item_edit_drive"
+        android:icon="@drawable/ic_edit_24dp"
+        android:title="Fahrt bearbeiten"
+        app:showAsAction="always"
+        android:visible="false"
+        tools:visible="true"/>
+
+    <item
+        android:id="@+id/menu_item_edit_complete_drive"
+        android:icon="@drawable/ic_check_24dp"
+        android:title="Bearbeitung abschließen"
+        app:showAsAction="always"
+        android:visible="false"
+        tools:visible="true"/>
+</menu>

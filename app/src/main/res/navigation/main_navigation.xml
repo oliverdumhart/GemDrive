@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.oliverdumhart.gemdrive.overview.MainFragment"
+        android:label="@string/app_name" >
+        <action
+            android:id="@+id/action_mainFragment_to_driveFragment"
+            app:destination="@id/driveFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/driveFragment"
+        android:name="com.oliverdumhart.gemdrive.drive.DriveFragment"
+        android:label=""
+        tools:layout="@layout/drive_fragment" >
+        <action
+            android:id="@+id/action_driveFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+        <argument
+            android:name="driveId"
+            app:argType="long" />
+        <argument
+            android:name="editState"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.oliverdumhart.gemdrive.location.LocationFragment"
+        android:label="Ort hinzufügen"
+        tools:layout="@layout/location_fragment">
+        <action
+            android:id="@+id/action_locationFragment_to_driveFragment"
+            app:destination="@id/driveFragment"
+            app:popUpTo="@+id/mainFragment" />
+        <argument
+            android:name="location"
+            android:defaultValue="@null"
+            app:argType="com.oliverdumhart.gemdrive.entities.Location"
+            app:nullable="true" />
+        <argument
+            android:name="arrivalTimePickable"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <argument
+            android:name="departureTimePickable"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <argument
+            android:name="locationVisible"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="noteVisible"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="editState"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="drive"
+            app:argType="com.oliverdumhart.gemdrive.entities.Drive"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GemDrive</string>
+    <string name="title_activity_main">GemDrive</string>
+    <string name="create_drive">Fahrt starten</string>
+    <string name="arrival">Ankunft</string>
+    <string name="departure">Abfahrt</string>
+    <string name="home">Home</string>
+    <string name="company">Firma</string>
+    <string name="shortcut_home">Home</string>
+    <string name="shortcut_company">Firma</string>
+    <string name="save">Speichern</string>
+    <string name="distance">Distanz</string>
+    <string name="distance_format">%d km</string>
+</resources>
