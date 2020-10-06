@@ -6,7 +6,7 @@
     <item
         android:id="@+id/menu_item_finish_drive"
         android:icon="@drawable/ic_flag_24dp"
-        android:title="Fahrt abschließen"
+        android:title="@string/finish_drive"
         app:showAsAction="always"
         android:visible="false"
         tools:visible="true"/>
@@ -14,7 +14,7 @@
     <item
         android:id="@+id/menu_item_edit_drive"
         android:icon="@drawable/ic_edit_24dp"
-        android:title="Fahrt bearbeiten"
+        android:title="@string/edit_drive"
         app:showAsAction="always"
         android:visible="false"
         tools:visible="true"/>
@@ -22,7 +22,7 @@
     <item
         android:id="@+id/menu_item_edit_complete_drive"
         android:icon="@drawable/ic_check_24dp"
-        android:title="Bearbeitung abschließen"
+        android:title="@string/finish_editing_drive"
         app:showAsAction="always"
         android:visible="false"
         tools:visible="true"/>

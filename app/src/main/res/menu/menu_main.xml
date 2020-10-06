@@ -4,12 +4,12 @@
 
     <item
         android:id="@+id/menu_item_create_csv"
-        android:title="CSV-Datei erstellen"
+        android:title="@string/create_csv_file"
         android:icon="@drawable/ic_file_24dp"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/menu_item_delete_entries"
-        android:title="Einträge löschen"
+        android:title="@string/delete_entries"
         app:showAsAction="never"/>
 </menu>
